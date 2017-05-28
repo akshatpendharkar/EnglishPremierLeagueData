@@ -40,8 +40,8 @@ public class PremierLeagueRunner implements Runnable{
 			
 			for (int j = 0; j < jarray.size(); j++) {
 				JsonObject jobject = (JsonObject) jarray.get(j);
-				String yearStart = String.valueOf(1992 + j);	
-				String yearEnd = String.valueOf(1992 + j + 1);	
+				String yearStart = String.valueOf(1992 + i);	
+				String yearEnd = String.valueOf(1992 + i + 1);	
 				String season = yearStart + "-" + yearEnd;
 				String rank = jobject.get("rank").getAsString();
 				String team = jobject.get("team").getAsString();
