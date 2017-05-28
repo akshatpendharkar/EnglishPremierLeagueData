@@ -32,7 +32,7 @@ public class PremierLeague {
 		System.out.println("readAllPaths");
 		ArrayList<String> paths = new ArrayList<String>();
 		try{
-			Files.walk(Paths.get("C:\\Users\\Akshat\\Desktop\\EPL_Data_1992_2015")).filter(Files::isRegularFile).map(path -> path.toString()).forEach(paths::add);		
+			Files.walk(Paths.get("C:\\Users\\Akshat\\Documents\\EnglishPremierLeagueData\\EPL_Data_1992_2015")).filter(Files::isRegularFile).map(path -> path.toString()).forEach(paths::add);		
 		}
 		catch (IOException exception) {
 			exception.printStackTrace();
@@ -49,7 +49,7 @@ public class PremierLeague {
 	
 	private static void writeCSV (ArrayList<String> combined) throws FileNotFoundException {
 		System.out.println("writeCSV");
-		File csvFile = new File("C:\\Users\\Akshat\\Desktop\\PremierLeague.csv");
+		File csvFile = new File("C:\\Users\\Akshat\\Documents\\EnglishPremierLeagueData\\PremierLeague.csv");
 		csvFile.getParentFile().mkdirs();
 		
 		PrintWriter writer = new PrintWriter(csvFile);
